@@ -94,3 +94,11 @@ def test_floor_nan():
     """
     with pytest.raises(ValueError):
         math.floor(float('nan'))
+
+
+def test_floor_input_type_error():
+    """
+    Test if TypeError is raised for invalid input types.
+    """
+    with pytest.raises(TypeError):
+        custom_round("not a number")
